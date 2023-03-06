@@ -2,7 +2,8 @@
 como creación de nodos, registro de manejadores de eventos*/
 import data from "./data/ghibli/ghibli.js";
 import { filterOfdata} from "./data.js";
-
+import { sortData} from "./data.js";
+document.getElementById("btnordenaraz").addEventListener("click",sortData);
 const mostrarAnimaciones = (data) => {
   const peliculasContainer = document.querySelector(".peliculas-grid");
   for (const pelicula of data) {

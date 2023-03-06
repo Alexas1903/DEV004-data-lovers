@@ -11,8 +11,9 @@ export const filterOfdata = (data, id) => {
   };
 };
 
-export const sortData = () => {
-  return "OMG";
+export const sortData = (peoplefilter) => {
+  const personajeOrdenadoaz = peoplefilter.sort()
+  return personajeOrdenadoaz;
 };
 /*export const computeStats = () => {
   return 'OMG';
