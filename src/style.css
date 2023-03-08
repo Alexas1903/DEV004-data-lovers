@@ -137,6 +137,18 @@ body {
   font-weight: bold;
 }
 
+nav { 
+  text-align: center;
+  background: #ff69b4;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: 250px;
+  font-family: "Phudu";
+  margin-left: 76%;
+ 
+}
+
 @media (max-width: 575.98px) {
   header {
     font-size: 200%;
