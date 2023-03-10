@@ -247,7 +247,7 @@ button{
   background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
   margin: 1.5%;
 }
-@media (max-width: 575.98px) {
+@media (max-width:600px) {
   header {
     font-size: 200%;
     width: 100%;
@@ -256,10 +256,21 @@ button{
     justify-content: center;
     height: 200px;
     font-family: "Phudu";
+    margin: auto;
   }
+  .h1 {
+  font-size: small;
+  }
+  .contenedorHijo {
+    /*background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);*/
+    background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
+    margin: 6%;
+  }
+  
+  
   header img {
-    width: 200px;
-    height: 220px;
+    width: 180px;
+    height: 200px;
   }
   .main-container {
     display: flex;
@@ -268,7 +279,7 @@ button{
     align-items: center;
     padding-top: 10px;
     font-family: "Rubik";
-    margin: 10%;
+    margin-left: 10%;
   }
 }
 @media (max-width: 991.98px) {
