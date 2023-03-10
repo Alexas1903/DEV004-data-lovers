@@ -9,9 +9,11 @@ header {
   height: 250px;
   font-family: "Phudu";
 }
-#subtitulo-general{
+#subtitulo-general {
   font-size: 200%;
-  margin:2%;
+  margin: 2%;
+  color: black;
+  text-shadow: none;
 }
 header img {
   width: 350px;
@@ -21,47 +23,82 @@ h2 {
   font-family: "Abel";
   text-align: center;
   margin-top: 2%;
+  text-shadow: 2px 2px 5px rgb(249, 239, 242);
 }
 
-#Encabezado{
+#Encabezado {
   font-family: "Abel";
   text-align: center;
   font-size: 35px;
-  background-image: linear-gradient(rgb(77, 139, 95), rgb(33, 22, 30));
-  width:85%;
+  width: 85%;
   margin-top: 2%;
   margin-left: auto;
   margin-right: auto;
- color: white;
- text-shadow: 2px 2px 5px rgb(28, 80, 8);
-
+  color: white;
+  text-shadow: 2px 2px 5px rgb(237, 48, 114);
 }
-
-
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #C7DFDF;
+  background-color: #c7dfdf;
   font-family: "Abel";
-  
 }
 
-
-.peliculas-grid {
+.main-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;;
+  justify-content: space-evenly;
   align-items: center;
-  /*padding-top: 100px;*/
   font-family: "Rubik";
   margin: 4%;
 }
-.pelicula {
-  position: relative;
-  text-align: center;
-  
-}
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  font-family: "Nunito Sans";
+}
+.selectordeOrden option[value=""][disabled] {
+  background: url("ruta-a-tu-icono.png") no-repeat center;
+  background-size: contain;
+  padding: 0;
+  border: none;
+  width: 20px; /* ajusta el ancho del icono según tus necesidades */
+  height: 20px; /* ajusta la altura del icono según tus necesidades */
+}
+.selectordeOrden {
+  text-align: center;
+  color: black;
+  height: 40px;
+  width: 140px;
+  font-size: 17px;
+  background-color: #83d1ae;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+button{
+  cursor: pointer;
+}
+#btnvolver {
+  text-align: center;
+  color: black;
+  height: 40px;
+  width: 140px;
+  font-size: 17px;
+  background-color: #83d1ae;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+/*
+.selectordeOrden :checked{
+  background-color:#1F90FF;
+}*/
 .pelicula-img-container {
   position: relative;
 }
@@ -88,10 +125,58 @@ body {
   text-align: center;
   padding: 30px;
 }
+.vehiculos-img-container {
+  position: relative;
+}
+.vehiculos-img-container img {
+  display: block;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+
+.vehiculos-img-container .info {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  right: 20px;
+  color: white;
+  background-color: rgba(14, 18, 17, 0.8);
+  display: none;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  padding: 20%;
+}
+.vehiculos-img-container .info p {
+  margin: 0;
+  line-height: 1.5;
+}
+.vehiculos-img-container .info p span {
+  font-weight: bold;
+}
 .personajes-img-container {
   position: relative;
 }
-.personajes-img-container .info{
+.pelicula-img-container button {
+  background: #ff69b4;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 50px;
+  width: 120px;
+  margin: auto;
+  height: 50px;
+  font-family: "Phudu";
+}
+.personajes-img-container img {
+  display: block;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+.personajes-img-container .info {
   position: absolute;
   top: 0;
   left: 20px;
@@ -105,7 +190,6 @@ body {
   overflow: auto;
   text-align: center;
   padding-top: 8em;
-
 }
 .pelicula-img-container .info p {
   margin: 0;
@@ -115,40 +199,54 @@ body {
 .pelicula-img-container .info p span {
   font-weight: bold;
 }
-.btnpersonajes{
- 
-  background: #ff69b4;
-  color: #fff;
-  padding: 10px 10px;
-  border-radius: 50px;
-  width: 120px;
-  align-items: flex-start;
-  margin: 10px 20px;
-  height: 50px;
-  font-family: "Phudu";
 
+.contenedorBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
 }
 
-.personajes-img-container .info p{
+.pelicula-img-container button:hover {
+  background-color: #83d1ae;
+}
+
+.personajes-img-container .info p {
   margin: 0;
   line-height: 1.5;
 }
-.personajes-img-container .info p span{
+.personajes-img-container .info p span {
   font-weight: bold;
 }
-
-nav { 
-  text-align: center;
-  background: #ff69b4;
-  color: #fff;
-  padding: 10px 10px;
-  border-radius: 10px;
-  width: 250px;
-  font-family: "Phudu";
-  margin-left: 76%;
- 
+.locaciones-img-container {
+  position: relative;
 }
-
+.locaciones-img-container .info {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  right: 20px;
+  color: white;
+  background-color: rgba(14, 18, 17, 0.8);
+  display: none;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  padding: 20%;
+}
+.locaciones-img-container img {
+  display: block;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+.contenedorHijo {
+  /*background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);*/
+  background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
+  margin: 1.5%;
+}
 @media (max-width: 575.98px) {
   header {
     font-size: 200%;
@@ -163,12 +261,7 @@ nav {
     width: 200px;
     height: 220px;
   }
-  #pelicula img {
-    width: 250px;
-    height: 100px;
-    width: calc(80%);
-  }
-  .peliculas-grid {
+  .main-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -179,30 +272,32 @@ nav {
   }
 }
 @media (max-width: 991.98px) {
-  .peliculas-grid {
+  .main-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding-top: 100px;
     font-family: "Rubik";
-    margin: 1%;
+    margin: 2%;
   }
 }
-.personajeS {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 100px;
-  font-family: "Rubik";
-  margin: 10%;
+/*He incluido este media query porque para ipad mini solo salia en columna de 1*/
+@media (max-width: 768.98px) {
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    font-family: "Rubik";
+    margin: auto;
+  }
+  #subtitulo-general {
+    font-size: 150%;
+  }
+  #Encabezado {
+    font-size: 30px;
+    margin-top: 5%;
+  }
 }
-.personajes-img-container img {
-  display: block;
-  width: 320px;
-  height: 400px;
-  margin: 20px;
-}
-
-
