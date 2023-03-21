@@ -4,10 +4,29 @@ header {
   font-size: 300%;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: center; /*alinea los elemntos dentro del header*/
   justify-content: center;
   height: 250px;
   font-family: "Phudu";
+}
+.noInformacion {
+  text-align: center;
+  display: flex;  /*diseño flexible y adaptable para los elementos hijos de un contenedor.*/
+  flex-wrap: wrap; /*especifica que los elementos hijos del contenedor deben envolverse en 
+  varias líneas si no tienen suficiente espacio horizontal en una sola fila.*/
+  justify-content: space-evenly;/*distribuye los elementos hijos del contenedor con un espacio uniforme entre ellos*/
+  font-family: "Rubik";
+}
+
+.noInformacion img {
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+
+.contenedorInfo {
+  background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
+  margin: 1.5%;
 }
 #subtitulo-general {
   font-size: 200%;
@@ -25,8 +44,6 @@ h2 {
   margin-top: 2%;
   text-shadow: 2px 2px 5px rgb(249, 239, 242);
 }
-<<<<<<< HEAD
-=======
 /* Estilo general del scrollbar */
 ::-webkit-scrollbar {
   width: 10px; /* Ancho del scrollbar */
@@ -47,11 +64,10 @@ h2 {
 ::-webkit-scrollbar-button {
   background-color: #fa7bbb; /* Color de fondo del botón del scrollbar */
 }
->>>>>>> 4d07d0ede8d4241b10fb2aa1c019096138d2605d
 
 #Anuncio {
   margin: auto;
-  margin-top: 5%;
+  margin-top: 2.5%;
   color: white;
   text-shadow: 2px 2px 5px rgb(215 238 172);
   border-radius: 8px;
@@ -60,9 +76,10 @@ h2 {
   width: fit-content;
   font-size: 190%;
   color: black;
+
 }
 #AnuncioPromedio {
-  position: relative;
+
   display: none;
   /* text-shadow: 2px 2px 5px rgb(237 48 114); */
   border-radius: 8px;
@@ -88,23 +105,18 @@ body {
   justify-content: space-evenly;
   align-items: center;
   font-family: "Rubik";
-  margin: 4%;
+  margin-top: 4%;
+  margin-bottom: 5%;
 }
-
+.oculto{
+  display: none;
+}
 nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   border-radius: 10px;
   font-family: "Nunito Sans";
-}
-.selectordeOrden option[value=""][disabled] {
-  background: url("ruta-a-tu-icono.png") no-repeat center;
-  background-size: contain;
-  padding: 0;
-  border: none;
-  width: 20px; /* ajusta el ancho del icono según tus necesidades */
-  height: 20px; /* ajusta la altura del icono según tus necesidades */
 }
 .selectordeOrden {
   text-align: center;
@@ -118,7 +130,34 @@ nav {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-button{
+.site-footer {
+  background-color: rgb(0, 121, 107);
+  color: white;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-address {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.footer-address p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.footer-address p:last-child {
+  font-size: 14px;
+  margin: 0;
+}
+
+button {
   cursor: pointer;
 }
 nav button {
@@ -135,7 +174,8 @@ nav button {
 }
 
 .pelicula-img-container {
-  position: relative;
+  position: relative; /*definimos el tipo de posicionamiento de un elemento */
+  /*posiciona el elemento de forma relativa a su posición original en el flujo normal del documento*/
 }
 
 .pelicula-img-container img {
@@ -146,7 +186,7 @@ nav button {
 }
 
 .pelicula-img-container .info {
-  position: absolute;
+  position: absolute; /*posiciona el elemento de forma absoluta en relación al primer elemento padre (pelicula-img-container)*/
   top: 0;
   left: 20px;
   bottom: 0;
@@ -196,7 +236,7 @@ nav button {
   position: relative;
 }
 .pelicula-img-container button {
-  background: #ff69b4;
+  background: #fa7bbb;
   color: #fff;
   padding: 10px 10px;
   border-radius: 50px;
@@ -282,31 +322,9 @@ nav button {
   background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
   margin: 1.5%;
 }
-@media (max-width:600px) {
-  header {
-    font-size: 200%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 200px;
-    font-family: "Phudu";
-    margin: auto;
-  }
-  .h1 {
-  font-size: small;
-  }
-  .contenedorHijo {
-    /*background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);*/
-    background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
-    margin: 6%;
-  }
-  
-  
-  header img {
-    width: 180px;
-    height: 200px;
-  }
+
+/*He incluido este media query para telefonos*/
+@media (max-width: 768.98px) {
   .main-container {
     display: flex;
     flex-wrap: wrap;
@@ -314,40 +332,20 @@ nav button {
     align-items: center;
     padding-top: 10px;
     font-family: "Rubik";
-    margin-left: 10%;
+    margin-top: 2%;
   }
-}
-@media (max-width: 991.98px) {
-  .main-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 100px;
-    font-family: "Rubik";
-    margin: 2%;
-  }
-}
-/*He incluido este media query porque para ipad mini solo salia en columna de 1*/
-@media (max-width: 768.98px) {
-  .main-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 100px;
-    font-family: "Rubik";
-    margin: auto;
-  }
+
   #subtitulo-general {
     font-size: 150%;
   }
   #Anuncio {
     font-size: 30px;
     margin-top: 5%;
+    margin: 10%;
+    margin-bottom: 0%;
   }
-<<<<<<< HEAD
-=======
+
+  
   .contenedorHijo {
     /*background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);*/
     background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
@@ -431,8 +429,7 @@ Esto significa que se aplica a dispositivos con una pantalla más pequeña que l
     text-shadow: 2px 2px 5px rgb(124 180 43);
     font-family: "Abel";
     width: fit-content;
-    /*  margin: 10px;
-    margin-right: 10px;*/
+    /*margin: auto;*/
     text-align: center;
   }
 
@@ -442,5 +439,4 @@ Esto significa que se aplica a dispositivos con una pantalla más pequeña que l
     width: fit-content;
     font-size: 140%;
   }
->>>>>>> 4d07d0ede8d4241b10fb2aa1c019096138d2605d
 }
