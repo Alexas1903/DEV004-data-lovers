@@ -1,0 +1,442 @@
+header {
+  background-color: #00796b;
+  color: #fdfffd;
+  font-size: 300%;
+  width: 100%;
+  display: flex;
+  align-items: center; /*alinea los elemntos dentro del header*/
+  justify-content: center;
+  height: 250px;
+  font-family: "Phudu";
+}
+.noInformacion {
+  text-align: center;
+  display: flex;  /*diseño flexible y adaptable para los elementos hijos de un contenedor.*/
+  flex-wrap: wrap; /*especifica que los elementos hijos del contenedor deben envolverse en 
+  varias líneas si no tienen suficiente espacio horizontal en una sola fila.*/
+  justify-content: space-evenly;/*distribuye los elementos hijos del contenedor con un espacio uniforme entre ellos*/
+  font-family: "Rubik";
+}
+
+.noInformacion img {
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+
+.contenedorInfo {
+  background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
+  margin: 1.5%;
+}
+#subtitulo-general {
+  font-size: 200%;
+  margin: 2%;
+  color: black;
+  text-shadow: none;
+}
+header img {
+  width: 350px;
+  height: 300px;
+}
+h2 {
+  font-family: "Abel";
+  text-align: center;
+  margin-top: 2%;
+  text-shadow: 2px 2px 5px rgb(249, 239, 242);
+}
+/* Estilo general del scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+/* Estilo de la pista del scrollbar */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color de fondo de la pista del scrollbar */
+}
+
+/* Estilo del thumb del scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #77bd9d; /* Color de fondo del thumb del scrollbar */
+  border-radius: 10px; /* Radio de borde del thumb del scrollbar */
+}
+
+/* Estilo del botón del scrollbar */
+::-webkit-scrollbar-button {
+  background-color: #fa7bbb; /* Color de fondo del botón del scrollbar */
+}
+
+#Anuncio {
+  margin: auto;
+  margin-top: 2.5%;
+  color: white;
+  text-shadow: 2px 2px 5px rgb(215 238 172);
+  border-radius: 8px;
+  background-color: #969774;
+  box-shadow: 0px 1px 10px rgb(0 0 0);
+  width: fit-content;
+  font-size: 190%;
+  color: black;
+
+}
+#AnuncioPromedio {
+
+  display: none;
+  /* text-shadow: 2px 2px 5px rgb(237 48 114); */
+  border-radius: 8px;
+  background-color: rgb(142 229 238 / 90%);
+  box-shadow: 0px 1px 10px rgb(0 0 0);
+  width: 500px;
+  color: black;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #c7dfdf;
+  font-family: "Abel";
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Rubik";
+  margin-top: 4%;
+  margin-bottom: 5%;
+}
+.oculto{
+  display: none;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  font-family: "Nunito Sans";
+}
+.selectordeOrden {
+  text-align: center;
+  color: black;
+  height: 40px;
+  width: 140px;
+  font-size: 17px;
+  background-color: #83d1ae;
+  border-radius: 10px;
+  border: none;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+.site-footer {
+  background-color: rgb(0, 121, 107);
+  color: white;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-address {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.footer-address p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.footer-address p:last-child {
+  font-size: 14px;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+nav button {
+  text-align: center;
+  color: black;
+  height: 40px;
+  width: 140px;
+  font-size: 17px;
+  background-color: #83d1ae;
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.pelicula-img-container {
+  position: relative; /*definimos el tipo de posicionamiento de un elemento */
+  /*posiciona el elemento de forma relativa a su posición original en el flujo normal del documento*/
+}
+
+.pelicula-img-container img {
+  display: block;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+
+.pelicula-img-container .info {
+  position: absolute; /*posiciona el elemento de forma absoluta en relación al primer elemento padre (pelicula-img-container)*/
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  right: 20px;
+  color: white;
+  background-color: rgba(14, 18, 17, 0.8);
+  display: none;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  padding: 30px;
+}
+.vehiculos-img-container {
+  position: relative;
+}
+.vehiculos-img-container img {
+  display: block;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+
+.vehiculos-img-container .info {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  right: 20px;
+  color: white;
+  background-color: rgba(14, 18, 17, 0.8);
+  display: none;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  padding: 20%;
+}
+.vehiculos-img-container .info p {
+  margin: 0;
+  line-height: 1.5;
+}
+.vehiculos-img-container .info p span {
+  font-weight: bold;
+}
+.personajes-img-container {
+  position: relative;
+}
+.pelicula-img-container button {
+  background: #fa7bbb;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 50px;
+  width: 120px;
+  margin: auto;
+  height: 50px;
+  font-family: "Phudu";
+}
+.personajes-img-container img {
+  display: block;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+.personajes-img-container .info {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  right: 20px;
+  color: white;
+  background-color: rgba(14, 18, 17, 0.8);
+  display: none;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  padding-top: 8em;
+}
+.pelicula-img-container .info p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pelicula-img-container .info p span {
+  font-weight: bold;
+}
+
+.contenedorBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.pelicula-img-container button:hover {
+  background-color: #83d1ae;
+}
+
+.personajes-img-container .info p {
+  margin: 0;
+  line-height: 1.5;
+}
+.personajes-img-container .info p span {
+  font-weight: bold;
+}
+.locaciones-img-container {
+  position: relative;
+}
+.locaciones-img-container .info {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  right: 20px;
+  color: white;
+  background-color: rgba(14, 18, 17, 0.8);
+  display: none;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  text-align: center;
+  padding: 20%;
+}
+.locaciones-img-container img {
+  display: block;
+  width: 320px;
+  height: 400px;
+  margin: 20px;
+}
+.contenedorHijo {
+  /*background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);*/
+  background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
+  margin: 1.5%;
+}
+
+/*He incluido este media query para telefonos*/
+@media (max-width: 768.98px) {
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    font-family: "Rubik";
+    margin-top: 2%;
+  }
+
+  #subtitulo-general {
+    font-size: 150%;
+  }
+  #Anuncio {
+    font-size: 30px;
+    margin-top: 5%;
+    margin: 10%;
+    margin-bottom: 0%;
+  }
+
+  
+  .contenedorHijo {
+    /*background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);*/
+    background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
+    margin: auto;
+    margin-bottom: 5%;
+  }
+  header {
+    background-color: #00796b;
+    color: #fdfffd;
+    font-size: 190%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    font-family: "Phudu";
+  }
+  header img {
+    width: 190px;
+    height: 210px;
+  }
+}
+/* dispositivos móviles y tablets con un ancho de pantalla máximo de 991.98 píxeles. 
+Esto significa que se aplica a dispositivos con una pantalla más pequeña que la de los ordenadores
+ de escritorio, pero más grande que la de los teléfonos móviles más pequeños.*/
+@media (max-width: 991.98px) {
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: "Rubik";
+    margin: 2%;
+    margin-top: 5%;
+  }
+  .contenedorHijo {
+    /*background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);*/
+    background-image: linear-gradient(rgb(77, 139, 95), #9b9775);
+    margin: auto;
+    margin-bottom: 5%;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    font-family: "Nunito Sans";
+    margin: auto;
+    margin: 3%;
+  }
+  nav button {
+    margin: 2%;
+    text-align: center;
+    color: black;
+    height: 40px;
+    width: 140px;
+    font-size: 17px;
+    background-color: #83d1ae;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+  .selectordeOrden {
+    text-align: center;
+    color: black;
+    height: 40px;
+    width: 120px;
+    font-size: 17px;
+    background-color: #83d1ae;
+    border-radius: 10px;
+    border: none;
+    margin-right: 2%;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+  #Anuncio {
+    font-size: 150%;
+    margin-top: 5%;
+    color: black;
+    text-shadow: 2px 2px 5px rgb(124 180 43);
+    font-family: "Abel";
+    width: fit-content;
+    /*margin: auto;*/
+    text-align: center;
+  }
+
+  #AnuncioPromedio {
+    margin: 10px;
+    margin-right: 10px;
+    width: fit-content;
+    font-size: 140%;
+  }
+}
